@@ -6,6 +6,7 @@ import CallToAction from '../components/sections/CallToAction';
 import PricingBox from '../components/sections/PricingBox';
 import FAQSection from '../components/sections/FAQSection';
 import Footer from '../components/layout/Footer';
+import MarketingThatWorksSection from '../components/sections/MarketingThatWorksSection';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <WhyChooseUs />
+      <MarketingThatWorksSection/>
       <CallToAction />
       <PricingBox />
       <FAQSection />
