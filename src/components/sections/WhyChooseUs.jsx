@@ -7,7 +7,7 @@ import why_us_four from "../../assets/why_us_four.svg";
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-12 px-6">
+    <div className="py-12 px-6 w-[90%] m-auto" id="about">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-center mb-3">
           Why Choose Homi.ai?
@@ -17,9 +17,9 @@ const WhyChooseUs = () => {
           you stay ahead of the competition.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1  sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {/* Instant Content Creation */}
-        <div className="bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+        <div className="bg-white border-black border-b-4 border border-black rounded-lg shadow-lg p-6 flex items-center gap-4">
           <div>
             <h2 className="text-2xl font-bold mb-4">
               Instant Content Creation
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* AI-Powered Personalization */}
-        <div className="bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+        <div className="bg-white border-black border-b-4 border border-black rounded-lg shadow-lg p-6 flex items-center gap-4">
           <div>
             <h2 className="text-2xl font-bold mb-4">
               AI-Powered Personalization
@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Multi-Platform Support */}
-        <div className="bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+        <div className="bg-white border-black border-b-4 border border-black rounded-lg shadow-lg p-6 flex items-center gap-4">
           <div>
             <h2 className="text-2xl font-bold mb-4">Multi-Platform Support</h2>
             <p className="text-gray-600">
@@ -77,7 +77,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Insights and Analytics */}
-        <div className="bg-white rounded-lg shadow-lg p-6 flex items-center gap-4">
+        <div className="bg-white border-black border-b-4 border border-black rounded-lg shadow-lg p-6 flex items-center gap-4">
           <div>
             <h2 className="text-2xl font-bold mb-4">Insights and Analytics</h2>
             <p className="text-gray-600">
