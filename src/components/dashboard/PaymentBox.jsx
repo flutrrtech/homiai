@@ -1,4 +1,5 @@
 import React from 'react';
+import PricingBox from "../sections/PricingBox"
 
 const PaymentBox = () => {
   const handlePayment = () => {
@@ -6,14 +7,7 @@ const PaymentBox = () => {
   };
 
   return (
-    <div className="payment-box">
-      <h2>Payment Details</h2>
-      <div className="payment-methods">
-        <button>Credit Card</button>
-        <button>PayPal</button>
-      </div>
-      <button onClick={handlePayment}>Complete Payment</button>
-    </div>
+    <PricingBox/>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 
 // Create AuthContext
 const AuthContext = createContext();
@@ -7,16 +7,27 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState(null);
+  const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
+  
+  useEffect(() => {
+    if (storedIsLoggedIn) {
+      setIsLoggedIn(true);
+    }
+  }, [])
 
   const login = (dummyData) => {
     setUserData(dummyData); 
     setIsLoggedIn(true); 
+    localStorage.setItem('isLoggedIn', true);
   };
+
+
 
   // Logout function
   const logout = () => {
     setUserData(null);
     setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
   };
 
   return (

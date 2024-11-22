@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CircleCheckBig } from 'lucide-react';
 
 const Pricing = () => {
   const [selectedPlan, setSelectedPlan] = useState('enterprise');
   const [isMonthly, setIsMonthly] = useState(true);
+
+  const navigate = useNavigate()
 
   const plans = [
     {
@@ -110,6 +113,7 @@ const Pricing = () => {
                   ? 'bg-[#01004F] text-white '
                   : 'bg-white border border-gray-800'
               }`}
+              onClick={() => navigate('/add-company-details')}
             >
               {plan.buttonText}
             </button>

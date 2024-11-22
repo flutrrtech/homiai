@@ -1,9 +1,11 @@
 // components/Navbar.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import homi_icon from "../../assets/homi_icon.svg"
+import homi_icon from "../../assets/homi_icon.svg";
+import { useAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
+  const { isLoggedIn, logout } = useAuth();
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const [isCaseStudyDropdownOpen, setIsCaseStudyDropdownOpen] = useState(false);
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
@@ -56,9 +58,9 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full py-4 px-8 flex justify-between items-center bg-transparent backdrop-blur-lg z-10">
       <div className="flex items-center w-full justify-between">
         <a href="/" className="flex items-center gap-2">
-            <img src={homi_icon} alt="homi_icon" />
-            <h1 className="text-4xl font-bold">homi.ai</h1>
-            {/* <img src="/homi-logo.svg" alt="Homi.ai Logo" className="h-8 mr-4" /> */}
+          <img src={homi_icon} alt="homi_icon" />
+          <h1 className="text-4xl font-bold">homi.ai</h1>
+          {/* <img src="/homi-logo.svg" alt="Homi.ai Logo" className="h-8 mr-4" /> */}
         </a>
         <nav className="space-x-4 relative flex">
           {/* Service Dropdown */}
@@ -99,19 +101,36 @@ const Navbar = () => {
             )}
           </div>
           <div>
-          <Link href="#about">
-            <p  >About</p>
+            <Link to="#about">
+              <p>About</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/workplace">
+              <p>Workplace</p>
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/contact">
+            <Link to="/contact">
               <a className="hover:text-gray-300">Contact us</a>
             </Link>
-            <Link to="/login">
-              <a className="bg-blue-900 border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-2 rounded">
-                Get started
-              </a>
-            </Link>
+            {isLoggedIn ? (
+              <Link to={"/login"}>
+                {" "}
+                <span
+                  onClick={logout}
+                  className="bg-blue-900 border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-2 rounded"
+                >
+                  Logout
+                </span>{" "}
+              </Link>
+            ) : (
+              <Link to="/login">
+                <span className="bg-blue-900 border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-2 rounded">
+                  Get started
+                </span>
+              </Link>
+            )}
           </div>
         </nav>
       </div>

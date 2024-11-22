@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const LoginForm = () => {
+  const {login} = useAuth()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -9,8 +11,8 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Login logic
-    navigate('/dashboard')
+    login({email, password})
+    navigate('/payment')
   };
 
   return (

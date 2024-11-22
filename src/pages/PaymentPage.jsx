@@ -3,7 +3,7 @@ import PaymentBox from '../components/dashboard/PaymentBox';
 
 const PaymentPage = () => {
   return (
-    <div className="payment-page">
+    <div className="payment-page py-24">
       <PaymentBox />
     </div>
   );
