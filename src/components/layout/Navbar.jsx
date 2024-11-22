@@ -1,6 +1,7 @@
 // components/Navbar.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import homi_icon from "../../assets/homi_icon.svg"
 
 const Navbar = () => {
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
@@ -55,8 +56,9 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full py-4 px-8 flex justify-between items-center bg-transparent backdrop-blur-lg z-10">
       <div className="flex items-center w-full justify-between">
         <Link href="/">
-          <a>
-            <h1 className="text-4xl font-bold">Homi.ai</h1>
+          <a className="flex items-center gap-2">
+            <img src={homi_icon} alt="homi_icon" />
+            <h1 className="text-4xl font-bold">homi.ai</h1>
             {/* <img src="/homi-logo.svg" alt="Homi.ai Logo" className="h-8 mr-4" /> */}
           </a>
         </Link>
@@ -99,7 +101,9 @@ const Navbar = () => {
             )}
           </div>
           <div>
-            <p>About</p>
+          <Link href="#about">
+            <p  >About</p>
+            </Link>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/contact">
