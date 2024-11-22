@@ -55,13 +55,11 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full py-4 px-8 flex justify-between items-center bg-transparent backdrop-blur-lg z-10">
       <div className="flex items-center w-full justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
             <img src={homi_icon} alt="homi_icon" />
             <h1 className="text-4xl font-bold">homi.ai</h1>
             {/* <img src="/homi-logo.svg" alt="Homi.ai Logo" className="h-8 mr-4" /> */}
-          </a>
-        </Link>
+        </a>
         <nav className="space-x-4 relative flex">
           {/* Service Dropdown */}
           <div className="relative" ref={serviceDropdownRef}>
@@ -88,13 +86,13 @@ const Navbar = () => {
             </button>
             {isServiceDropdownOpen && (
               <div className="absolute bg-white text-black left-0 mt-2 py-2 w-32  px-4 rounded-md shadow-md z-10">
-                <Link href="/service1">
+                <Link to="/service1">
                   <a className="block hover:text-gray-300">Service 1</a>
                 </Link>
-                <Link href="/service2">
+                <Link to="/service2">
                   <a className="block hover:text-gray-300">Service 2</a>
                 </Link>
-                <Link href="/service3">
+                <Link to="/service3">
                   <a className="block hover:text-gray-300">Service 3</a>
                 </Link>
               </div>
@@ -109,7 +107,7 @@ const Navbar = () => {
             <Link href="/contact">
               <a className="hover:text-gray-300">Contact us</a>
             </Link>
-            <Link href="/get-started">
+            <Link to="/login">
               <a className="bg-blue-900 border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-2 rounded">
                 Get started
               </a>

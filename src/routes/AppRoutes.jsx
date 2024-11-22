@@ -11,6 +11,8 @@ import AdWriting from '../pages/services/AdWriting';
 import BlogWriting from '../pages/services/BlogWriting';
 import PrivateRoute from './PrivateRoute';
 import Layout from '../components/layout/Layout';
+import WorkPlace from '../pages/WorkPlace';
+import SEOWriting from '../pages/services/SEOWriting';
 
 const AppRoutes = () => {
   return (
@@ -28,8 +30,10 @@ const AppRoutes = () => {
             <Route path="/logo-upload" element={<LogoUpload />} />
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/create" element={<CreationPage />} />
+            <Route path="/workplace" element={<WorkPlace/>}/>
             <Route path="/services/ad-writing" element={<AdWriting />} />
             <Route path="/services/blog-writing" element={<BlogWriting />} />
+            <Route path="/services/seo-writing" element={<SEOWriting />} />
           </Route>
         </Route>
       </Routes>

@@ -11,7 +11,7 @@ import ContactUs from '../components/sections/ContactUs';
 
 const Home = () => {
   return (
-    <div className="home-page">
+    <div className="home-page pt-20">
       <HeroSection />
       <WhyChooseUs />
       <MarketingThatWorksSection/>

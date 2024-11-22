@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const navigate = useNavigate()
   return (
-    <div className="login-page pt-20 min-h-screen w-full flex justify-center items-center bg-[#F5F8FF]">
+    <div className="login-page pt-24 pb-20  min-h-screen w-full flex justify-center items-center bg-[#F5F8FF]">
       <section className="login-modal min-w-[40%] rounded-lg flex flex-col items-center justify-between border border-black p-8 border-b-4 bg-white gap-2">
         <img src={LoginModalBalloon} 
           className='w-40 h-40'
