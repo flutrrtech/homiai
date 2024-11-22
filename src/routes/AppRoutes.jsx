@@ -10,24 +10,27 @@ import CreationPage from '../pages/CreationPage';
 import AdWriting from '../pages/services/AdWriting';
 import BlogWriting from '../pages/services/BlogWriting';
 import PrivateRoute from './PrivateRoute';
+import Layout from '../components/layout/Layout';
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path='/' element={<Layout/>}>
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
-        {/* Protected Routes */}
-        <Route element={<PrivateRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/logo-upload" element={<LogoUpload />} />
-          <Route path="/payment" element={<PaymentPage />} />
-          <Route path="/create" element={<CreationPage />} />
-          <Route path="/services/ad-writing" element={<AdWriting />} />
-          <Route path="/services/blog-writing" element={<BlogWriting />} />
+          {/* Protected Routes */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/logo-upload" element={<LogoUpload />} />
+            <Route path="/payment" element={<PaymentPage />} />
+            <Route path="/create" element={<CreationPage />} />
+            <Route path="/services/ad-writing" element={<AdWriting />} />
+            <Route path="/services/blog-writing" element={<BlogWriting />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
