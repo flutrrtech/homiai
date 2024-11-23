@@ -8,7 +8,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-[90%] mx-auto p-8 bg-[#EBEBEB] rounded-xl shadow-sm">
+    <div className="w-[90%] mt-20 mx-auto p-8 bg-[#EBEBEB] rounded-xl shadow-sm">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Column */}
         <div className="space-y-6">

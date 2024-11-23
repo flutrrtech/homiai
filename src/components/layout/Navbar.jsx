@@ -101,7 +101,7 @@ const Navbar = () => {
             )}
           </div>
           <div>
-            <Link to="#about">
+            <Link to="/">
               <p>About</p>
             </Link>
           </div>

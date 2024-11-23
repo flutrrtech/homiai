@@ -73,7 +73,7 @@ const CompanyUploadForm = () => {
 
         {/* Submit Button */}
         <button className="w-full bg-[#0A0F2C] text-white py-3 px-4 rounded-lg hover:opacity-90 transition-opacity" onClick={() => navigate('/workplace')}>
-          Generate blog post
+          Submit Details
         </button>
       </div>
     </div>

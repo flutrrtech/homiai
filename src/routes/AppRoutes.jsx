@@ -14,6 +14,7 @@ import Layout from "../components/layout/Layout";
 import WorkPlace from "../pages/WorkPlace";
 import SEOWriting from "../pages/services/SEOWriting";
 import CompanyUploadForm from "../pages/Dashboard";
+import ContactForm from "../components/sections/ContactUs";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/contact" element={<ContactForm />} />
           {/* Protected Routes */}
           <Route element={<PrivateRoute />}>
             <Route
