@@ -14,7 +14,7 @@ const HeroSection = () => {
     <>
       <section className="bg-white py-6 lg:py-24 px-6 lg:px-12 flex flex-col items-center justify-between">
         {/* Text Section */}
-        <div className="flex items-center justify-between w-[90%] m-auto gap-7">
+        <div className="flex flex-col sm:flex-row items-center justify-between w-[90%] m-auto gap-7">
           <div>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Create Marketing Content in Seconds with AI

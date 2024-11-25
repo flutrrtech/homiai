@@ -5,7 +5,7 @@ const MarketingThatWorksSection = () => {
     return (
       <div className="bg-[#F5F8FF] mt-8 rounded-lg border-b-4 border border-black shadow-lg  p-8 flex items-center w-[85%] m-auto justify-between">
         <div>
-          <h2 className="text-2xl font-bold mb-4">Marketing That Works as Hard as You Do</h2>
+          <h2 className="text-lg sm:text-2xl font-bold mb-4">Marketing That Works as Hard as You Do</h2>
           <p className="text-gray-600 mb-8">
             Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.
           </p>
